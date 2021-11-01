@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python3 train_test_split.py data 0.25
+    deps:
+    - path: data/data.csv
+      md5: 1c6e5de0765b33dbd47403233896da2f
+      size: 403401
+    - path: train_test_split.py
+      md5: 8506d5fdc1a4b3556ff70ad078551215
+      size: 372
+    params:
+      params.yaml:
+        prepare.root: data
+        prepare.test_size: 0.25

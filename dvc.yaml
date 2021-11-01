@@ -1,0 +1,9 @@
+stages:
+  prepare:
+    cmd: python3 train_test_split.py data 0.25
+    deps:
+    - data/data.csv
+    - train_test_split.py
+    params:
+    - prepare.root
+    - prepare.test_size
